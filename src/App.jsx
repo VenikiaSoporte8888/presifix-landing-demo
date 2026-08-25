@@ -3,7 +3,7 @@ import { SITE } from './config'
 
 const track = (name) => window.dispatchEvent(new CustomEvent('presifix:analytics', { detail: { name } }))
 const DemoLink = ({ className = 'button primary', children = 'Ver demo' }) => <a className={className} href={SITE.demoUrl} target="_blank" rel="noreferrer" onClick={() => track('click_ver_demo')}>{children}<span aria-hidden="true">↗</span></a>
-const RequestLink = ({ className = 'button secondary' }) => <a className={className} href="#solicitar-demo" onClick={() => track('click_solicitar_demostracion')}>Solicitar demostración</a>
+const RequestLink = ({ className = 'button secondary' }) => <a className={className} href="#solicitar-demo" onClick={() => track('click_solicitar_demostracion')}>Solicitar demo</a>
 
 const features = [
   ['Estado', 'Consulta el avance de un vistazo.', 'check'], ['Fotos', 'Todo el contexto visual, reunido.', 'camera'],
@@ -59,9 +59,9 @@ export default function App() {
   return <>
     <ObserveSections />
     <a className="skip" href="#contenido">Saltar al contenido</a>
-    <header className="header"><a className="logo" href="#inicio" aria-label={`${SITE.brand}, inicio`}><span>P</span>{SITE.brand}</a><DemoLink className="button primary header-cta" /></header>
+    <header className="header"><a className="logo" href="#inicio" aria-label={`${SITE.brand}, inicio`}><span>P</span>{SITE.brand}</a><RequestLink className="button primary header-cta" /></header>
     <main id="contenido">
-      <section className="hero" id="inicio"><div className="hero-copy"><h1>Ten el control de las incidencias de tu comunidad</h1><p className="lead">{SITE.brand} reúne en un solo lugar el seguimiento, las fotos, las notas, los estados y el histórico para que siempre sepas qué está pasando.</p><div className="actions"><DemoLink /></div></div><div className="hero-illustration"><span className="hero-shape shape-blue" aria-hidden="true"></span><span className="hero-shape shape-cream" aria-hidden="true"></span><img src="/illustrations/presifix-hero.png" alt="Persona gestionando con tranquilidad las incidencias de su comunidad desde el móvil" fetchPriority="high" /></div></section>
+      <section className="hero" id="inicio"><div className="hero-copy"><h1>Ten el control de las incidencias de tu comunidad</h1><p className="lead">{SITE.brand} reúne en un solo lugar el seguimiento, las fotos, las notas, los estados y el histórico para que siempre sepas qué está pasando.</p><div className="actions"><RequestLink className="button primary" /></div></div><div className="hero-illustration"><span className="hero-shape shape-blue" aria-hidden="true"></span><span className="hero-shape shape-cream" aria-hidden="true"></span><img src="/illustrations/presifix-hero.png" alt="Persona gestionando con tranquilidad las incidencias de su comunidad desde el móvil" fetchPriority="high" /></div></section>
       <section className="hero-transition" aria-label="Incidencias claras, comunidad tranquila"><span aria-hidden="true"></span><p>Incidencias claras, comunidad tranquila.</p><span aria-hidden="true"></span></section>
 
       <section className="section problem"><div className="section-copy"><p className="kicker">El problema</p><h2>¿Cuántas veces has tenido que preguntar «qué ha pasado con esto»?</h2><p>Entre WhatsApp, llamadas y mensajes es fácil perder información. {SITE.brand} centraliza cada incidencia para que puedas seguirla desde el primer aviso hasta su resolución.</p></div><figure className="problem-visual"><img src="/illustrations/incidencias-claras.png" alt="Persona gestionando una incidencia con mensajes, llamadas, fotos y estados organizados" loading="lazy" /></figure></section>
@@ -98,7 +98,6 @@ export default function App() {
             <div className="screenshot-copy"><h3>Comunicar una incidencia es fácil</h3><p>Indica a quién debe llegar, explica qué ocurre, señala dónde sucede y añade una foto si hace falta.</p></div>
           </article>
         </div>
-        <DemoLink />
       </section>
 
       <section className="section comparison"><div className="centered"><p className="kicker">Cada herramienta, para lo que hace mejor</p><h2>WhatsApp sirve para hablar. {SITE.brand} sirve para hacer seguimiento.</h2><p className="intro">Una conversación puede perderse. Una incidencia en {SITE.brand} queda organizada, actualizada y registrada.</p></div><div className="compare-grid"><article><h3>WhatsApp</h3><ul><li>Conversaciones</li><li>Información dispersa</li><li>Búsqueda manual</li><li>Difícil histórico</li></ul></article><article className="presifix"><h3>{SITE.brand}</h3><ul><li>Incidencia organizada</li><li>Estado visible</li><li>Fotos y notas</li><li>Seguimiento</li><li>Histórico</li></ul></article></div></section>
@@ -107,8 +106,8 @@ export default function App() {
 
       <section className="section faq" id="faq"><div><p className="kicker">Resolvemos tus dudas</p><h2>Preguntas frecuentes</h2><p>Respuestas directas para que tengas claro qué hace {SITE.brand} y cómo encaja en tu comunidad.</p></div><div className="accordion">{faqs.map(([q, a]) => <details key={q}><summary>{q}<span aria-hidden="true">＋</span></summary><p>{a}</p></details>)}</div></section>
 
-      <section className="final-cta" id="solicitar-demo"><div><p className="kicker">Da el siguiente paso</p><h2>¿Quieres verlo en funcionamiento?</h2><p>Descubre cómo puede ayudarte {SITE.brand} a gestionar las incidencias de tu comunidad de una forma más clara y sencilla.</p><div className="actions"><DemoLink /><RequestLink className="button secondary light" /></div></div><aside><span>Solicitud de demostración</span><h3>Canal de contacto pendiente</h3><p>Añade aquí el email, teléfono, enlace de agenda o formulario real cuando esté disponible.</p><small>Este bloque no envía datos ni está conectado a servicios externos.</small></aside></section>
+      <section className="final-cta" id="solicitar-demo"><div><p className="kicker">Da el siguiente paso</p><h2>¿Quieres verlo en funcionamiento?</h2><p>Descubre cómo puede ayudarte {SITE.brand} a gestionar las incidencias de tu comunidad de una forma más clara y sencilla.</p><div className="actions"><RequestLink className="button primary" /></div></div>{/* Conectar aquí el canal definitivo de solicitud cuando esté disponible. */}</section>
     </main>
-    <footer><a className="logo" href="#inicio"><span>P</span>{SITE.brand}</a><p>Gestión clara de incidencias para comunidades de vecinos.</p><a href={SITE.demoUrl} target="_blank" rel="noreferrer">Ver demo ↗</a></footer>
+    <footer><a className="logo" href="#inicio"><span>P</span>{SITE.brand}</a><p>Gestión clara de incidencias para comunidades de vecinos.</p></footer>
   </>
 }
