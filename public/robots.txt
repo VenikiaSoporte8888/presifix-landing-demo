@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# TODO: sustituir por la URL final tras el despliegue en Vercel.
+Sitemap: https://TU-DOMINIO-VERCEL.vercel.app/sitemap.xml
