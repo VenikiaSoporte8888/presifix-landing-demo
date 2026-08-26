@@ -163,3 +163,18 @@ img{max-width:100%;height:auto}
 .price:nth-child(3n+1){border:2px solid #72bf9e}
 .price:nth-child(3n+2){border:2px solid #78addf}
 .price:nth-child(3n){border:2px solid #eeaa84}
+
+/* 1. Iconos Seguimiento/Histórico/Información clara: más saturación, un escalón por debajo de Estado/Fotos/Notas */
+.icon-route{background:#9dc4e7;color:#1a4a78}
+.icon-clock{background:#8acdaf;color:#0e6846}
+.icon-spark{background:#eeaa84;color:#7a4020}
+
+/* 3. Tarjetas de rol: recuperar el color de fondo (una regla previa con
+   !important lo forzaba siempre a blanco) y contorno completo en vez de
+   solo el borde superior */
+.role.president{background:var(--mint)!important;border:2px solid #8acdaf}
+.role.admin{background:var(--blue)!important;border:2px solid #9dc4e7}
+.role.maint{background:var(--yellow)!important;border:2px solid #e9c96d}
+
+/* 4. Revisión general: caja del CTA final, único bloque de contenido que seguía muy lavado */
+.final-cta{background:var(--mint)}
