@@ -60,11 +60,11 @@ export default function App() {
 
       <section className="section centered soft" id="beneficios"><p className="kicker">Más claridad, menos preguntas</p><h2>Toda la información, en un solo lugar</h2><p className="intro">Consulta el estado, quién está gestionando la incidencia, las fotos, las notas y el histórico sin tener que perseguir a nadie.</p><img className="features-illustration" src="/screenshots/features-illustration.png" alt="Seis tarjetas de colores representando Estado, Foto, Notas, Seguimiento, Histórico e Información clara" loading="lazy" /></section>
 
-      <section className="section centered" id="como-funciona"><img className="section-illustration" src="/screenshots/seccion-paso-a-paso.png" alt="Paso a paso: se comunica una incidencia, el Presidente la revisa, se deriva a Administración o Mantenimiento, la persona responsable actualiza el estado y todo queda registrado hasta su resolución" loading="lazy" /></section>
+      <section className="section centered section-full-image" id="como-funciona"><img className="section-banner" src="/screenshots/seccion-paso-a-paso.png" alt="Paso a paso: se comunica una incidencia, el Presidente la revisa, se deriva a Administración o Mantenimiento, la persona responsable actualiza el estado y todo queda registrado hasta su resolución" loading="lazy" /></section>
 
       <section className="section roles" id="para-quien"><div className="centered"><p className="kicker">Cada persona ve lo que necesita</p><h2>Una misma incidencia, todos coordinados</h2></div><div className="role-images"><img className="section-illustration" src="/screenshots/rol-presidente.png" alt="El presidente sabe qué está pasando: incidencias y estados, fotos y seguimiento, histórico e información clara" loading="lazy" /><img className="section-illustration" src="/screenshots/rol-administrador.png" alt="El Administrador tiene el control total: todas tus comunidades en un vistazo, asignación inteligente de tareas, seguimiento y control en tiempo real, informes y trazabilidad" loading="lazy" /><img className="section-illustration" src="/screenshots/rol-mantenedor.png" alt="El mantenedor sabe qué tiene que resolver: urgentes y tareas, materiales y gastos, seguimiento y notas" loading="lazy" /></div></section>
 
-      <section className="section centered section-full-image"><img className="section-illustration" src="/screenshots/seccion-ia-chatgpt.png" alt="Con ayuda inteligente de ChatGPT: redacta avisos, resume incidencias y ordena la información en segundos" loading="lazy" /></section>
+      <section className="section centered section-full-image"><img className="section-banner" src="/screenshots/seccion-ia-chatgpt.png" alt="Con ayuda inteligente de ChatGPT: redacta avisos, resume incidencias y ordena la información en segundos" loading="lazy" /></section>
 
       <section className="section centered soft" id="demo">
         <p className="kicker">La aplicación, por dentro</p>
@@ -92,7 +92,7 @@ export default function App() {
         </div>
       </section>
 
-      <section className="section centered section-full-image"><img className="section-illustration" src="/screenshots/seccion-whatsapp-vs-presifix.png" alt="Comparativa: WhatsApp sirve para hablar, PresiFix sirve para hacer seguimiento, con ayuda inteligente de ChatGPT" loading="lazy" /></section>
+      <section className="section centered section-full-image"><img className="section-banner" src="/screenshots/seccion-whatsapp-vs-presifix.png" alt="Comparativa: WhatsApp sirve para hablar, PresiFix sirve para hacer seguimiento, con ayuda inteligente de ChatGPT" loading="lazy" /></section>
 
       <section className="section centered pricing" id="precios"><p className="kicker">Precios claros</p><h2>Planes sencillos para cada comunidad</h2><p className="intro">La misma herramienta para todos. El precio se adapta al tamaño de la comunidad.</p><div className="price-grid">{prices.map(([range, price]) => <article className="price" key={range}><p>{range}</p><strong>{price}</strong><span>al mes</span><small>Todas las funciones incluidas</small></article>)}</div><p className="same"><span>✓</span> Mismas funciones en todos los planes. Solo cambia el precio según el número de viviendas.</p></section>
 
