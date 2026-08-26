@@ -182,15 +182,11 @@ img{max-width:100%;height:auto}
 /* Ilustración de las 6 tarjetas, sustituye el grid de .feature */
 .features-illustration{display:block;width:100%;max-width:520px;margin:2.5rem auto 0}
 
-/* Sección de Contacto */
-.contact{background:#fff}
-.contact-card{max-width:420px;margin:2.5rem auto 0;background:var(--mint);border:1px solid #c7e7d7;border-radius:24px;padding:2.5rem 2rem}
-.contact-name{font-size:1.15rem;font-weight:700;color:#16231e;margin-bottom:.2rem}
-.contact-role{font-size:.9rem;color:var(--muted);margin-bottom:1.5rem}
-.whatsapp-button{background:#25d366;border-color:#25d366;color:#fff;box-shadow:0 6px 18px rgba(37,211,102,.25)}
-.whatsapp-button:hover{background:#1fb958;border-color:#1fb958}
-
 /* Botón flotante de WhatsApp, fijo mientras se hace scroll */
 .whatsapp-float{position:fixed;right:1.25rem;bottom:1.25rem;width:56px;height:56px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:#25d366;color:#fff;font-size:1.6rem;text-decoration:none;box-shadow:0 8px 20px rgba(37,211,102,.4);z-index:80;transition:.2s ease}
 .whatsapp-float:hover{background:#1fb958;transform:translateY(-2px)}
 @media(max-width:390px){.whatsapp-float{right:1rem;bottom:1rem;width:52px;height:52px;font-size:1.4rem}}
+
+/* Espacio extra al final de la página para que el botón flotante no
+   tape el último contenido (el CTA final) al llegar al fondo */
+main{padding-bottom:6rem}
