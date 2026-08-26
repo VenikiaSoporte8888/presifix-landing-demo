@@ -112,3 +112,32 @@ img{max-width:100%;height:auto}
 @media(min-width:651px){
   .hero-cta{min-height:58px;padding:1.05rem 2.2rem;font-size:1.05rem}
 }
+
+/* Bloque "El problema" con más protagonismo visual (fondo verde de marca) */
+.problem{background:var(--green);color:#fff}
+.problem:after{background:var(--green-dark);opacity:.35}
+.problem .kicker{color:var(--mint)}
+.problem h2{font-weight:800;color:#fff}
+.problem .section-copy>p{font-weight:700;font-size:1.15rem;color:#eaf6f0}
+
+/* Tarjetas Estado/Fotos/Notas destacadas con color de fondo propio */
+.feature-highlight{border:none;padding:1.9rem;box-shadow:0 10px 26px rgba(22,35,30,.07)}
+.feature-highlight h3{font-size:1.08rem}
+.feature-highlight .icon{background:#fff;width:44px;height:44px}
+.feature-check{background:var(--mint)}
+.feature-camera{background:var(--blue)}
+.feature-note{background:var(--yellow)}
+
+/* Sección de IA con más color (verde oscuro original) y visual del dashboard */
+.ai{background:#173f31;color:#fff;border:none;position:relative;overflow:hidden}
+.ai:after{background:var(--green-dark);opacity:.45}
+.ai .kicker{color:#82dfba}
+.ai p{color:#d7e9e1}
+.ai-mark{background:#2c614e;color:#a4eccf}
+.ai p.ai-example{margin-top:.9rem;color:#fff;font-weight:700}
+.ai-visual{display:flex;flex-direction:column;gap:1.2rem}
+.ai-visual img{width:100%;height:auto;border-radius:16px;box-shadow:0 14px 32px rgba(0,0,0,.22)}
+
+@media(max-width:650px){
+  .ai{background:#173f31}
+}
