@@ -212,3 +212,13 @@ main{padding-bottom:6rem}
 .section-full-image{padding-top:0;padding-bottom:0;background:transparent}
 #como-funciona.section-full-image{background:transparent}
 .section-banner{display:block;width:100vw;max-width:100vw;height:auto;position:relative;left:50%;right:50%;margin:0 -50vw;border-radius:0;box-shadow:none}
+
+/* Hero en móvil/tablet: texto, luego la ilustración, luego el CTA
+   (en escritorio el grid de 2 columnas no se toca) */
+@media(max-width:980px){
+  .hero{display:flex;flex-direction:column;gap:1.25rem}
+  .hero-copy{display:contents}
+  .hero-copy h1,.hero-copy .lead{order:0}
+  .hero-illustration{order:1}
+  .hero-copy .actions{order:2}
+}
