@@ -221,4 +221,5 @@ main{padding-bottom:6rem}
   .hero-copy h1,.hero-copy .lead{order:0}
   .hero-illustration{order:1}
   .hero-copy .actions{order:2}
+  .hero-illustration img{object-position:center top}
 }
