@@ -218,7 +218,7 @@ main{padding-bottom:6rem}
 @media(max-width:980px){
   .hero{display:flex;flex-direction:column;gap:1.25rem}
   .hero-copy{display:contents}
-  .hero-copy h1,.hero-copy .lead{order:0}
+  .hero-copy .kicker,.hero-copy h1,.hero-copy .lead{order:0}
   .hero-illustration{order:1}
   .hero-copy .actions{order:2}
   .hero-illustration img{object-position:center top}
