@@ -181,3 +181,11 @@ img{max-width:100%;height:auto}
 
 /* Ilustración de las 6 tarjetas, sustituye el grid de .feature */
 .features-illustration{display:block;width:100%;max-width:520px;margin:2.5rem auto 0}
+
+/* Sección de Contacto */
+.contact{background:#fff}
+.contact-card{max-width:420px;margin:2.5rem auto 0;background:var(--mint);border:1px solid #c7e7d7;border-radius:24px;padding:2.5rem 2rem}
+.contact-name{font-size:1.15rem;font-weight:700;color:#16231e;margin-bottom:.2rem}
+.contact-role{font-size:.9rem;color:var(--muted);margin-bottom:1.5rem}
+.whatsapp-button{background:#25d366;border-color:#25d366;color:#fff;box-shadow:0 6px 18px rgba(37,211,102,.25)}
+.whatsapp-button:hover{background:#1fb958;border-color:#1fb958}

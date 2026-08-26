@@ -97,6 +97,17 @@ export default function App() {
       <section className="section faq" id="faq"><div><p className="kicker">Resolvemos tus dudas</p><h2>Preguntas frecuentes</h2><p>Respuestas directas para que tengas claro qué hace {SITE.brand} y cómo encaja en tu comunidad.</p></div><div className="accordion">{faqs.map(([q, a]) => <details key={q}><summary>{q}<span aria-hidden="true">＋</span></summary><p>{a}</p></details>)}</div></section>
 
       <section className="final-cta" id="solicitar-demo"><div><p className="kicker">Da el siguiente paso</p><h2>¿Quieres verlo en funcionamiento?</h2><p>Descubre cómo puede ayudarte {SITE.brand} a gestionar las incidencias de tu comunidad de una forma más clara y sencilla.</p><div className="actions"><RequestLink className="button primary" /></div></div></section>
+
+      <section className="section centered contact" id="contacto">
+        <h2>Contacto</h2>
+        <div className="contact-card">
+          <p className="contact-name">Francisco Valencia</p>
+          <p className="contact-role">CEO de PresiFix</p>
+          <a className="button whatsapp-button" href="https://wa.me/34653655706" target="_blank" rel="noopener noreferrer" onClick={() => track('click_whatsapp')}>
+            <span aria-hidden="true">💬</span> Escríbenos por WhatsApp
+          </a>
+        </div>
+      </section>
     </main>
   </>
 }
