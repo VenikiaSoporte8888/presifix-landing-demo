@@ -107,3 +107,8 @@ img{max-width:100%;height:auto}
   .section{padding-inline:.9rem}
   .screenshot-card{padding:.7rem}
 }
+
+/* Mayor protagonismo del CTA principal del hero solo en escritorio */
+@media(min-width:651px){
+  .hero-cta{min-height:58px;padding:1.05rem 2.2rem;font-size:1.05rem}
+}
