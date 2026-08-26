@@ -178,3 +178,6 @@ img{max-width:100%;height:auto}
 
 /* 4. Revisión general: caja del CTA final, único bloque de contenido que seguía muy lavado */
 .final-cta{background:var(--mint)}
+
+/* Ilustración de las 6 tarjetas, sustituye el grid de .feature */
+.features-illustration{display:block;width:100%;max-width:520px;margin:2.5rem auto 0}

@@ -5,11 +5,6 @@ const track = (name) => window.dispatchEvent(new CustomEvent('presifix:analytics
 const DemoLink = ({ className = 'button primary', children = 'Ver demo' }) => <a className={className} href={SITE.demoUrl} target="_blank" rel="noopener noreferrer" onClick={() => track('click_ver_demo')}>{children}<span aria-hidden="true">↗</span></a>
 const RequestLink = ({ className = 'button secondary' }) => <a className={className} href={SITE.demoUrl} target="_blank" rel="noopener noreferrer" onClick={() => track('click_solicitar_demostracion')}>Solicitar demo</a>
 
-const features = [
-  ['Estado', 'Consulta el avance de un vistazo.', 'check'], ['Fotos', 'Todo el contexto visual, reunido.', 'camera'],
-  ['Notas', 'La información importante no se pierde.', 'note'], ['Seguimiento', 'Sabe quién se ocupa y qué viene después.', 'route'],
-  ['Histórico', 'Cada actualización queda registrada.', 'clock'], ['Información clara', 'Lista para compartir con vecinos y junta.', 'spark'],
-]
 const steps = ['Se comunica una incidencia.', 'El Presidente la revisa.', 'Se deriva a Administración o Mantenimiento.', 'La persona responsable actualiza el estado.', 'Todo queda registrado hasta su resolución.']
 const prices = [['Hasta 10 viviendas', '9 €'], ['11–25 viviendas', '19 €'], ['26–50 viviendas', '29 €'], ['51–100 viviendas', '49 €'], ['Más de 100 viviendas', '79 €']]
 const faqs = [
@@ -21,11 +16,6 @@ const faqs = [
   ['¿Qué ocurre con las incidencias antiguas?', 'PresiFix permite mantener un histórico para poder consultar qué ocurrió y cómo se gestionó.'],
   ['¿El precio cambia según las funciones?', 'No. La herramienta es la misma. La tarifa se adapta al tamaño de la comunidad.'],
 ]
-
-function Icon({ name }) {
-  const icons = { check: '✓', camera: '▣', note: '≡', route: '→', clock: '◷', spark: '✦' }
-  return <span className={`icon icon-${name}`} aria-hidden="true">{icons[name] || '✓'}</span>
-}
 
 function AppMockup() {
   return <div className="app-stage" aria-label="Vista ilustrativa de la interfaz de PresiFix">
@@ -66,7 +56,7 @@ export default function App() {
 
       <section className="section problem"><div className="section-copy"><p className="kicker">El problema</p><h2>¿Cuántas veces has tenido que preguntar «qué ha pasado con esto»?</h2><p>Entre WhatsApp, llamadas y mensajes es fácil perder información. {SITE.brand} centraliza cada incidencia para que puedas seguirla desde el primer aviso hasta su resolución.</p></div><figure className="problem-visual"><img src="/illustrations/incidencias-claras.png" alt="Persona gestionando una incidencia con mensajes, llamadas, fotos y estados organizados" loading="lazy" /></figure></section>
 
-      <section className="section centered soft" id="beneficios"><p className="kicker">Más claridad, menos preguntas</p><h2>Toda la información, en un solo lugar</h2><p className="intro">Consulta el estado, quién está gestionando la incidencia, las fotos, las notas y el histórico sin tener que perseguir a nadie.</p><div className="feature-grid">{features.map(([title, desc, icon]) => <article className={['check', 'camera', 'note'].includes(icon) ? `feature feature-highlight feature-${icon}` : 'feature'} key={title}><Icon name={icon}/><h3>{title}</h3><p>{desc}</p></article>)}</div></section>
+      <section className="section centered soft" id="beneficios"><p className="kicker">Más claridad, menos preguntas</p><h2>Toda la información, en un solo lugar</h2><p className="intro">Consulta el estado, quién está gestionando la incidencia, las fotos, las notas y el histórico sin tener que perseguir a nadie.</p><img className="features-illustration" src="/screenshots/features-illustration.png" alt="Seis tarjetas de colores representando Estado, Foto, Notas, Seguimiento, Histórico e Información clara" loading="lazy" /></section>
 
       <section className="section centered" id="como-funciona"><p className="kicker">Paso a paso</p><h2>Así de fácil funciona {SITE.brand}</h2><div className="steps">{steps.map((step, i) => <article className={`step step-${['mint', 'blue', 'yellow', 'coral'][i % 4]}`} key={step}><span>{i + 1}</span><p>{step}</p></article>)}</div></section>
 
@@ -81,7 +71,7 @@ export default function App() {
         <div className="screens real-screens">
           <article className="screenshot-card dashboard-card">
             <div className="screenshot-media square-media">
-              <img src="/screenshots/dashboard-presidente.png" alt="Dashboard del Presidente con accesos a incidencias, avisos, vocales y resumen mensual" loading="lazy" />
+              <img src="/screenshots/comunicar-averia.png" alt="Pantalla de comunicar avería, indicando a quién debe llegar y qué ha ocurrido" loading="lazy" />
             </div>
             <div className="screenshot-copy"><h3>Controla tu comunidad de un vistazo</h3><p>Consulta incidencias, avisos de vecinos y actividad mensual desde un mismo panel.</p></div>
           </article>
