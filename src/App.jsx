@@ -49,6 +49,9 @@ export default function App() {
   return <>
     <ObserveSections />
     <a className="skip" href="#contenido">Saltar al contenido</a>
+    <a className="whatsapp-float" href="https://wa.me/34653655706" target="_blank" rel="noopener noreferrer" aria-label="Escríbenos por WhatsApp" onClick={() => track('click_whatsapp_float')}>
+      <span aria-hidden="true">💬</span>
+    </a>
     <header className="header"><a className="logo" href="#inicio" aria-label={`${SITE.brand}, inicio`}><span>P</span>{SITE.brand}</a></header>
     <main id="contenido">
       <section className="hero" id="inicio"><div className="hero-copy"><h1>Presidente, todas las incidencias de tu comunidad, bajo control, en un solo lugar.</h1><p className="lead">{SITE.brand} reúne seguimiento, fotos, estados, notas e histórico para que nada se quede a medias — y tus vecinos sepan que su comunidad está en buenas manos.</p><div className="actions"><RequestLink className="button primary hero-cta" /></div></div><div className="hero-illustration"><span className="hero-shape shape-blue" aria-hidden="true"></span><span className="hero-shape shape-cream" aria-hidden="true"></span><img src="/illustrations/presifix-hero.png" alt="Persona gestionando con tranquilidad las incidencias de su comunidad desde el móvil" fetchPriority="high" /></div></section>

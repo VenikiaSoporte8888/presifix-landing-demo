@@ -189,3 +189,8 @@ img{max-width:100%;height:auto}
 .contact-role{font-size:.9rem;color:var(--muted);margin-bottom:1.5rem}
 .whatsapp-button{background:#25d366;border-color:#25d366;color:#fff;box-shadow:0 6px 18px rgba(37,211,102,.25)}
 .whatsapp-button:hover{background:#1fb958;border-color:#1fb958}
+
+/* Botón flotante de WhatsApp, fijo mientras se hace scroll */
+.whatsapp-float{position:fixed;right:1.25rem;bottom:1.25rem;width:56px;height:56px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:#25d366;color:#fff;font-size:1.6rem;text-decoration:none;box-shadow:0 8px 20px rgba(37,211,102,.4);z-index:80;transition:.2s ease}
+.whatsapp-float:hover{background:#1fb958;transform:translateY(-2px)}
+@media(max-width:390px){.whatsapp-float{right:1rem;bottom:1rem;width:52px;height:52px;font-size:1.4rem}}
