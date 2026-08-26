@@ -2,8 +2,8 @@ import { useEffect } from 'react'
 import { SITE } from './config'
 
 const track = (name) => window.dispatchEvent(new CustomEvent('presifix:analytics', { detail: { name } }))
-const DemoLink = ({ className = 'button primary', children = 'Ver demo' }) => <a className={className} href={SITE.demoUrl} target="_blank" rel="noreferrer" onClick={() => track('click_ver_demo')}>{children}<span aria-hidden="true">↗</span></a>
-const RequestLink = ({ className = 'button secondary' }) => <a className={className} href="#solicitar-demo" onClick={() => track('click_solicitar_demostracion')}>Solicitar demo</a>
+const DemoLink = ({ className = 'button primary', children = 'Ver demo' }) => <a className={className} href={SITE.demoUrl} target="_blank" rel="noopener noreferrer" onClick={() => track('click_ver_demo')}>{children}<span aria-hidden="true">↗</span></a>
+const RequestLink = ({ className = 'button secondary' }) => <a className={className} href={SITE.demoUrl} target="_blank" rel="noopener noreferrer" onClick={() => track('click_solicitar_demostracion')}>Solicitar demo</a>
 
 const features = [
   ['Estado', 'Consulta el avance de un vistazo.', 'check'], ['Fotos', 'Todo el contexto visual, reunido.', 'camera'],
@@ -106,7 +106,7 @@ export default function App() {
 
       <section className="section faq" id="faq"><div><p className="kicker">Resolvemos tus dudas</p><h2>Preguntas frecuentes</h2><p>Respuestas directas para que tengas claro qué hace {SITE.brand} y cómo encaja en tu comunidad.</p></div><div className="accordion">{faqs.map(([q, a]) => <details key={q}><summary>{q}<span aria-hidden="true">＋</span></summary><p>{a}</p></details>)}</div></section>
 
-      <section className="final-cta" id="solicitar-demo"><div><p className="kicker">Da el siguiente paso</p><h2>¿Quieres verlo en funcionamiento?</h2><p>Descubre cómo puede ayudarte {SITE.brand} a gestionar las incidencias de tu comunidad de una forma más clara y sencilla.</p><div className="actions"><RequestLink className="button primary" /></div></div>{/* Conectar aquí el canal definitivo de solicitud cuando esté disponible. */}</section>
+      <section className="final-cta" id="solicitar-demo"><div><p className="kicker">Da el siguiente paso</p><h2>¿Quieres verlo en funcionamiento?</h2><p>Descubre cómo puede ayudarte {SITE.brand} a gestionar las incidencias de tu comunidad de una forma más clara y sencilla.</p><div className="actions"><RequestLink className="button primary" /></div></div></section>
     </main>
     <footer><a className="logo" href="#inicio"><span>P</span>{SITE.brand}</a><p>Gestión clara de incidencias para comunidades de vecinos.</p></footer>
   </>
