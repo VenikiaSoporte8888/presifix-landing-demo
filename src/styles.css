@@ -141,3 +141,25 @@ img{max-width:100%;height:auto}
 @media(max-width:650px){
   .ai{background:#173f31}
 }
+
+/* 1. Tarjetas Estado/Fotos/Notas: subir tamaño de letra */
+.feature-highlight h3{font-size:1.25rem}
+.feature-highlight p{font-size:.95rem}
+
+/* 2. Paso a paso: cada paso en su propia tarjeta de color */
+.step{border-radius:18px;padding:1.4rem 1.1rem;text-align:left}
+.step-mint{background:var(--mint)}
+.step-blue{background:var(--blue)}
+.step-yellow{background:var(--yellow)}
+.step-coral{background:var(--coral)}
+@media(min-width:981px){.step{text-align:center}}
+
+/* 4. Comparativa WhatsApp vs PresiFix: más contraste entre ambas cajas */
+.compare-grid article{background:var(--coral);border-color:#f6ddd0}
+.compare-grid .presifix{background:var(--mint);border-color:#9ed9bb}
+
+/* 5. Tarjetas de precios: contorno completo del color, no solo borde superior */
+.price{border-width:2px}
+.price:nth-child(3n+1){border:2px solid #72bf9e}
+.price:nth-child(3n+2){border:2px solid #78addf}
+.price:nth-child(3n){border:2px solid #eeaa84}
