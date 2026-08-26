@@ -193,3 +193,11 @@ main{padding-bottom:6rem}
 
 /* Ilustraciones de sección completa (paso a paso, IA, comparativa) */
 .section-illustration{display:block;width:100%;max-width:1100px;margin:0 auto;border-radius:24px;box-shadow:0 12px 34px rgba(58,77,68,.08)}
+
+/* Secciones de imagen a ancho completo: sin el padding horizontal de
+   .section, para que la ilustración use todo el ancho disponible */
+.section-full-image{padding-left:0;padding-right:0}
+
+/* Tercera captura de "Mira PresiFix por dentro": mismo criterio de
+   ajuste sin recorte ni espacio en blanco que las ilustraciones de arriba */
+.report-media img{width:100%;max-width:100%;height:auto;max-height:none;object-fit:contain}

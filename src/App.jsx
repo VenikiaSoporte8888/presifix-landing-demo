@@ -64,7 +64,7 @@ export default function App() {
 
       <section className="section roles" id="para-quien"><div className="centered"><p className="kicker">Cada persona ve lo que necesita</p><h2>Una misma incidencia, todos coordinados</h2></div><div className="role-grid"><article className="role president"><div className="role-tag">Presidente</div><h3>El Presidente sabe qué está pasando</h3><p>Control, seguimiento y transparencia sin llamadas constantes ni mensajes dispersos.</p><ul><li>Incidencias y estados</li><li>Fotos y seguimiento</li><li>Histórico e información clara</li></ul></article><article className="role admin"><div className="role-tag">Administrador de Fincas</div><h3>El Administrador trabaja con información más clara</h3><p>Recibe las incidencias que requieren su gestión, las actualiza y mantiene informado al Presidente sin sustituir su software habitual.</p><small>{SITE.brand} complementa su trabajo diario.</small></article><article className="role maint"><div className="role-tag">Mantenimiento</div><h3>Mantenimiento recibe exactamente lo que necesita</h3><p>Incidencia, ubicación, fotos y seguimiento. Después puede actualizar el estado y dejar constancia del trabajo realizado.</p></article></div></section>
 
-      <section className="section centered"><img className="section-illustration" src="/screenshots/seccion-ia-chatgpt.png" alt="Con ayuda inteligente de ChatGPT: redacta avisos, resume incidencias y ordena la información en segundos" loading="lazy" /></section>
+      <section className="section centered section-full-image"><img className="section-illustration" src="/screenshots/seccion-ia-chatgpt.png" alt="Con ayuda inteligente de ChatGPT: redacta avisos, resume incidencias y ordena la información en segundos" loading="lazy" /></section>
 
       <section className="section centered soft" id="demo">
         <p className="kicker">La aplicación, por dentro</p>
@@ -85,14 +85,14 @@ export default function App() {
           </article>
           <article className="screenshot-card report-card">
             <div className="screenshot-media report-media">
-              <img src="/screenshots/comunicar-incidencia.png" alt="Formulario real para comunicar una incidencia, indicar destinatario, ubicación y añadir una foto" loading="lazy" />
+              <img src="/screenshots/dashboard-presidente.png" alt="Panel del Presidente con accesos a Incidencia, Avisos de vecinos, Resumen del mes y Vocales, y contadores de pendientes y en curso" loading="lazy" />
             </div>
-            <div className="screenshot-copy"><h3>Comunicar una incidencia es fácil</h3><p>Indica a quién debe llegar, explica qué ocurre, señala dónde sucede y añade una foto si hace falta.</p></div>
+            <div className="screenshot-copy"><h3>Todo tu panel, de un vistazo</h3><p>Incidencia, avisos de vecinos, resumen del mes y vocales, con los pendientes y en curso siempre visibles.</p></div>
           </article>
         </div>
       </section>
 
-      <section className="section centered"><img className="section-illustration" src="/screenshots/seccion-whatsapp-vs-presifix.png" alt="Comparativa: WhatsApp sirve para hablar, PresiFix sirve para hacer seguimiento, con ayuda inteligente de ChatGPT" loading="lazy" /></section>
+      <section className="section centered section-full-image"><img className="section-illustration" src="/screenshots/seccion-whatsapp-vs-presifix.png" alt="Comparativa: WhatsApp sirve para hablar, PresiFix sirve para hacer seguimiento, con ayuda inteligente de ChatGPT" loading="lazy" /></section>
 
       <section className="section centered pricing" id="precios"><p className="kicker">Precios claros</p><h2>Planes sencillos para cada comunidad</h2><p className="intro">La misma herramienta para todos. El precio se adapta al tamaño de la comunidad.</p><div className="price-grid">{prices.map(([range, price]) => <article className="price" key={range}><p>{range}</p><strong>{price}</strong><span>al mes</span><small>Todas las funciones incluidas</small></article>)}</div><p className="same"><span>✓</span> Mismas funciones en todos los planes. Solo cambia el precio según el número de viviendas.</p></section>
 
