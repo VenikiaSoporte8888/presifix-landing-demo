@@ -267,3 +267,15 @@ main{padding-bottom:6rem}
 .accordion details:nth-child(5n+4) summary span{color:#7c6fd1}
 .accordion details:nth-child(5n+5){border-color:#c9932e}
 .accordion details:nth-child(5n+5) summary span{color:#c9932e}
+
+/* Etiqueta del hero bastante más grande y visible */
+.hero-kicker{font-size:1.35rem}
+@media(max-width:650px){.hero-kicker{font-size:1.05rem}}
+
+/* Mockup de móvil flotando junto a la ilustración del hero, en el
+   hueco que deja la imagen de la persona (arriba en escritorio,
+   abajo en móvil, donde cambia el object-position del hombre) */
+.hero-mockup{position:absolute;top:1%;right:0;width:310px;transform:scale(.38);transform-origin:top right;z-index:2;pointer-events:none;filter:drop-shadow(0 14px 24px rgba(22,35,30,.16))}
+@media(max-width:980px){
+  .hero-mockup{top:auto;bottom:1%;transform-origin:bottom right;transform:scale(.32)}
+}

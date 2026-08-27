@@ -26,7 +26,7 @@ function AppMockup() {
       <div className="phone-top"><b>{SITE.brand}</b><span>•••</span></div>
       <div className="hello"><span>Buenos días</span><strong>Tu comunidad, al día</strong></div>
       <div className="summary"><span><b>6</b> Abiertas</span><span><b>3</b> En curso</span><span><b>12</b> Resueltas</span></div>
-      <div className="mock-label">Incidencias recientes</div>
+      <div className="mock-label">Mis incidencias</div>
       <div className="issue"><i className="dot coral"/><span><b>Fuga en el garaje</b><small>En curso · Actualizada hoy</small></span><em>›</em></div>
       <div className="issue"><i className="dot blue"/><span><b>Luz del portal</b><small>Asignada · Mantenimiento</small></span><em>›</em></div>
       <div className="issue"><i className="dot green"/><span><b>Puerta de acceso</b><small>Resuelta · Ayer</small></span><em>›</em></div>
@@ -57,7 +57,7 @@ export default function App() {
     </a>
     <header className="header"><a className="logo" href="#inicio" aria-label={`${SITE.brand}, inicio`}><span>P</span>{SITE.brand}</a></header>
     <main id="contenido">
-      <section className="hero" id="inicio"><div className="hero-copy"><p className="kicker">La app para presidentes</p><h1>Todo lo que pasa en tu comunidad, por fin en orden</h1><p className="lead">Consulta incidencias, fotos, notas, estados e histórico sin depender de llamadas, audios ni mensajes dispersos.</p><div className="actions"><RequestLink className="button primary hero-cta" /></div></div><div className="hero-illustration"><span className="hero-shape shape-blue" aria-hidden="true"></span><span className="hero-shape shape-cream" aria-hidden="true"></span><img src="/illustrations/presifix-hero.png" alt="Persona gestionando con tranquilidad las incidencias de su comunidad desde el móvil" fetchPriority="high" /></div></section>
+      <section className="hero" id="inicio"><div className="hero-copy"><p className="kicker hero-kicker">La app para presidentes</p><h1>Todo lo que pasa en tu comunidad, por fin en orden</h1><p className="lead">Consulta incidencias, fotos, notas, estados e histórico sin depender de llamadas, audios ni mensajes dispersos.</p><div className="actions"><RequestLink className="button primary hero-cta" /></div></div><div className="hero-illustration"><span className="hero-shape shape-blue" aria-hidden="true"></span><span className="hero-shape shape-cream" aria-hidden="true"></span><img src="/illustrations/presifix-hero.png" alt="Persona gestionando con tranquilidad las incidencias de su comunidad desde el móvil" fetchPriority="high" /><div className="hero-mockup"><AppMockup /></div></div></section>
       <section className="hero-transition" aria-label="Incidencias claras, comunidad tranquila"><span aria-hidden="true"></span><p>Incidencias claras, comunidad tranquila.</p><span aria-hidden="true"></span></section>
 
       <section className="section problem"><div className="section-copy"><p className="kicker">El problema</p><h2>¿Cuántas veces has tenido que preguntar «qué ha pasado con esto»?</h2><p>Entre WhatsApp, llamadas y mensajes es fácil perder información. {SITE.brand} centraliza cada incidencia para que puedas seguirla desde el primer aviso hasta su resolución.</p></div><figure className="problem-visual"><img src="/illustrations/incidencias-claras.png" alt="Persona gestionando una incidencia con mensajes, llamadas, fotos y estados organizados" loading="lazy" /></figure></section>
