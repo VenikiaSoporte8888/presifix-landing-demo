@@ -3,7 +3,7 @@ import { SITE } from './config'
 
 const track = (name) => window.dispatchEvent(new CustomEvent('presifix:analytics', { detail: { name } }))
 const DemoLink = ({ className = 'button primary', children = 'Ver demo' }) => <a className={className} href={SITE.demoUrl} target="_blank" rel="noopener noreferrer" onClick={() => track('click_ver_demo')}>{children}<span aria-hidden="true">↗</span></a>
-const RequestLink = ({ className = 'button secondary' }) => <a className={className} href={SITE.demoUrl} target="_blank" rel="noopener noreferrer" onClick={() => track('click_solicitar_demostracion')}>Solicitar demo</a>
+const RequestLink = ({ className = 'button secondary', children = 'Solicitar demo' }) => <a className={className} href={SITE.demoUrl} target="_blank" rel="noopener noreferrer" onClick={() => track('click_solicitar_demostracion')}>{children}</a>
 
 const faqs = [
   ['¿Cómo gestionar incidencias en una comunidad de vecinos?', 'Lo más útil es registrar cada incidencia en un único sistema donde puedan consultarse su estado, responsables, fotos, notas y actualizaciones. PresiFix organiza este seguimiento desde el primer aviso hasta la resolución.'],
@@ -138,7 +138,7 @@ export default function App() {
 
       <section className="section faq" id="faq"><div><p className="kicker">Resolvemos tus dudas</p><h2>Preguntas frecuentes</h2><p>Respuestas directas para que tengas claro qué hace {SITE.brand} y cómo encaja en tu comunidad.</p></div><div className="accordion">{faqs.map(([q, a]) => <details key={q}><summary>{q}<span aria-hidden="true"></span></summary><p>{a}</p></details>)}</div><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} /></section>
 
-      <section className="final-cta" id="solicitar-demo"><div><p className="kicker">Da el siguiente paso</p><h2>¿Quieres verlo en funcionamiento?</h2><p>Descubre cómo puede ayudarte {SITE.brand} a gestionar las incidencias de tu comunidad de una forma más clara y sencilla.</p><div className="actions"><RequestLink className="button primary" /></div></div></section>
+      <section className="final-cta" id="solicitar-demo"><div><p className="kicker">Da el siguiente paso</p><h2>¿Quieres verlo en funcionamiento?</h2><p>Descubre cómo puede ayudarte {SITE.brand} a gestionar las incidencias de tu comunidad de una forma más clara y sencilla.</p><div className="actions"><RequestLink className="button primary">Ver demo</RequestLink></div></div></section>
     </main>
     <footer><a className="logo" href="#inicio"><span>P</span>{SITE.brand}</a><p>Gestión clara de incidencias para comunidades de vecinos.</p></footer>
   </>
