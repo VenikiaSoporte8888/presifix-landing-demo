@@ -120,6 +120,20 @@ img{max-width:100%;height:auto}
 .problem h2{font-weight:800;color:#fff}
 .problem .section-copy>p{font-weight:700;font-size:1.15rem;color:#eaf6f0}
 
+/* "De la información dispersa al control": título + 3 puntos + cierre,
+   sustituyendo el párrafo del bloque "El problema" (mismo fondo verde) */
+.problem-points{margin-top:1.6rem}
+.problem-points h3{color:#fff;font-size:1.55rem;font-weight:800;line-height:1.25;margin-bottom:1.1rem}
+.problem-points ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.9rem}
+.problem-points li{position:relative;padding-left:1.7rem;font-weight:700;font-size:1.1rem;line-height:1.5;color:#eaf6f0}
+.problem-points li:before{content:"✓";position:absolute;left:0;top:0;color:var(--mint);font-weight:900}
+.problem-points-footer{margin:1.4rem 0 0;font-size:.85rem;font-weight:600;color:var(--mint)}
+@media(max-width:650px){
+  .problem-points{margin-top:1.3rem}
+  .problem-points h3{font-size:1.3rem;margin-bottom:.9rem}
+  .problem-points li{font-size:1.02rem}
+}
+
 /* Tarjetas Estado/Fotos/Notas destacadas con color de fondo propio */
 .feature-highlight{border:none;padding:1.9rem;box-shadow:0 10px 26px rgba(22,35,30,.07)}
 .feature-highlight h3{font-size:1.08rem}
@@ -225,9 +239,10 @@ main{padding-bottom:6rem}
   .hero-cta{min-height:56px;padding:1rem 1.9rem;font-size:1.1rem}
 }
 
-/* Texto de apoyo bajo el CTA principal del hero */
-.hero-cta-hint{margin-top:.85rem;max-width:420px}
-@media(max-width:650px){.hero-cta-hint{max-width:none}}
+/* Texto de apoyo bajo el CTA principal del hero: más grande y en negrita
+   para que se lea bien (mismo color y resto de estilo de .micro) */
+.hero-cta-hint{margin-top:.85rem;max-width:420px;font-size:1.15rem;font-weight:700;line-height:1.4}
+@media(max-width:650px){.hero-cta-hint{max-width:none;font-size:1.02rem}}
 
 /* El CTA del hero es de ancho completo en móvil (regla previa más abajo);
    se limita su ancho para que no quede bajo el botón flotante de WhatsApp,
