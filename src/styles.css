@@ -279,3 +279,53 @@ main{padding-bottom:6rem}
 @media(max-width:980px){
   .hero-mockup{top:auto;bottom:1%;transform-origin:bottom right;transform:scale(.32)}
 }
+
+/* Infografías (Qué es PresiFix, Paso a paso, WhatsApp vs PresiFix):
+   en escritorio se ve la imagen tal cual; en móvil el texto de la
+   imagen se hace ilegible, así que se sustituye por tarjetas de
+   texto real con el mismo contenido */
+.infographic-mobile{display:none}
+@media(max-width:768px){
+  .infographic-desktop{display:none}
+  .infographic-mobile{display:flex;flex-direction:column;gap:16px;width:100%;padding:24px 16px;box-sizing:border-box}
+  .green-text{color:#119956}
+
+  /* Qué es PresiFix */
+  .mobile-info-card{padding:24px 20px;border-radius:24px;border:1px solid rgba(0,0,0,.05);box-shadow:0 8px 24px rgba(0,0,0,.06)}
+  .mobile-info-card h3{margin:0 0 12px;font-size:20px;font-weight:800;color:#10211b}
+  .mobile-info-card ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:8px}
+  .mobile-info-card li{font-size:16px;line-height:1.4;color:#10211b}
+  .mobile-info-card.green{background:#f0f9f2}
+  .mobile-info-card.green h3{color:#087443}
+  .mobile-info-card.blue{background:#edf5ff}
+  .mobile-info-card.blue h3{color:#1f6fb2}
+  .mobile-info-card.orange{background:#fff0e9}
+  .mobile-info-card.orange h3{color:#c14f2e}
+  .mobile-info-footer{margin:4px 4px 0;font-size:16px;line-height:1.5;font-weight:600;color:#10211b;text-align:center}
+
+  /* Paso a paso */
+  .mobile-step-card{position:relative;display:flex;align-items:center;gap:18px;min-height:105px;padding:20px;border-radius:24px;border:1px solid rgba(0,0,0,.05);box-shadow:0 8px 24px rgba(0,0,0,.06)}
+  .mobile-step-card.green{background:#eef9f0}
+  .mobile-step-card.blue{background:#edf5ff}
+  .mobile-step-card.yellow{background:#fff6d9}
+  .mobile-step-card.orange{background:#fff0e9}
+  .step-number{flex:0 0 auto;display:grid;place-items:center;width:54px;height:54px;border-radius:50%;background:#079654;color:#fff;font-size:28px;font-weight:900}
+  .mobile-step-card.blue .step-number{background:#2786da}
+  .mobile-step-card.yellow .step-number{background:#ffad00}
+  .mobile-step-card.orange .step-number{background:#ff694f}
+  .mobile-step-card p{margin:0;font-size:19px;line-height:1.35;font-weight:700;color:#10211b}
+
+  /* WhatsApp vs PresiFix */
+  .mobile-comparison-intro{margin:0 4px 4px;font-size:16px;line-height:1.5;text-align:center;color:#10211b}
+  .comparison-card{padding:22px 18px;border-radius:24px;background:#fff;box-shadow:0 8px 24px rgba(0,0,0,.06)}
+  .whatsapp-card{border:2px solid #ffd2ca;background:#fff7f5}
+  .presifix-card{border:2px solid #9bd5aa;background:#f5fcf6}
+  .comparison-card h3{margin:0 0 18px;font-size:28px;line-height:1;font-weight:900}
+  .whatsapp-card h3{color:#b52c27}
+  .presifix-card h3{color:#0d9655}
+  .comparison-item{display:flex;flex-direction:column;padding:14px 0;border-bottom:1px solid rgba(0,0,0,.08)}
+  .comparison-item:last-child{border-bottom:none}
+  .comparison-item strong{margin-bottom:4px;font-size:18px;line-height:1.25;color:#10211b}
+  .comparison-item span{font-size:16px;line-height:1.4;color:#43534c}
+  .vs-mobile{display:grid;place-items:center;width:58px;height:58px;margin:-4px auto;border-radius:50%;border:1px solid #cfe2d4;background:#fff;font-size:22px;font-weight:900;color:#10211b}
+}

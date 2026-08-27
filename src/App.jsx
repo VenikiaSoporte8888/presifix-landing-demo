@@ -62,11 +62,22 @@ export default function App() {
 
       <section className="section problem"><div className="section-copy"><p className="kicker">El problema</p><h2>¿Cuántas veces has tenido que preguntar «qué ha pasado con esto»?</h2><p>Entre WhatsApp, llamadas y mensajes es fácil perder información. {SITE.brand} centraliza cada incidencia para que puedas seguirla desde el primer aviso hasta su resolución.</p></div><figure className="problem-visual"><img src="/illustrations/incidencias-claras.png" alt="Persona gestionando una incidencia con mensajes, llamadas, fotos y estados organizados" loading="lazy" /></figure></section>
 
-      <section className="section centered section-full-image" id="gestion-incidencias"><div className="mini-copy wide"><p className="kicker">Qué es {SITE.brand}</p><h2>Gestión de incidencias para comunidades de propietarios</h2></div><img className="section-banner" src="/screenshots/infografico-que-es-presifix.png" alt="Infográfico: qué hace PresiFix, quién lo usa y qué consigues" loading="lazy" /></section>
+      <section className="section centered section-full-image" id="gestion-incidencias"><div className="mini-copy wide"><p className="kicker">Qué es {SITE.brand}</p><h2>Gestión de incidencias para comunidades de propietarios</h2></div><img className="section-banner infographic-desktop" src="/screenshots/infografico-que-es-presifix.png" alt="Infográfico: qué hace PresiFix, quién lo usa y qué consigues" loading="lazy" /><div className="infographic-mobile">
+        <div className="mobile-info-card green"><h3>Qué hace</h3><ul><li>Organiza incidencias en un único lugar</li><li>Centraliza avisos, fotos, notas y estados</li><li>Evita mensajes y conversaciones dispersas</li></ul></div>
+        <div className="mobile-info-card blue"><h3>Quién lo usa</h3><ul><li>Presidente</li><li>Administrador de fincas</li><li>Mantenimiento</li></ul></div>
+        <div className="mobile-info-card orange"><h3>Qué consigues</h3><ul><li>Seguimiento claro de cada incidencia</li><li>Histórico visible hasta la resolución</li><li>Mejor coordinación en la comunidad</li></ul></div>
+        <p className="mobile-info-footer">{SITE.brand} conecta a tu comunidad y te da <span className="green-text">control y tranquilidad</span>.</p>
+      </div></section>
 
       <section className="section centered soft" id="beneficios"><p className="kicker">Más claridad, menos preguntas</p><h2>Toda la información, en un solo lugar</h2><p className="intro">Consulta el estado, quién está gestionando la incidencia, las fotos, las notas y el histórico sin tener que perseguir a nadie.</p><img className="features-illustration" src="/screenshots/features-illustration.png" alt="Seis tarjetas de colores representando Estado, Foto, Notas, Seguimiento, Histórico e Información clara" loading="lazy" /></section>
 
-      <section className="section centered section-full-image" id="como-funciona"><div className="mini-copy"><p className="kicker">Paso a paso</p><h2>Así funciona {SITE.brand}</h2><p>Cada incidencia se registra, se revisa y se asigna a Administración o Mantenimiento; la persona responsable actualiza su estado y queda un histórico hasta su resolución.</p></div><img className="section-banner" src="/screenshots/seccion-paso-a-paso.png" alt="Paso a paso: se comunica una incidencia, el Presidente la revisa, se deriva a Administración o Mantenimiento, la persona responsable actualiza el estado y todo queda registrado hasta su resolución" loading="lazy" /></section>
+      <section className="section centered section-full-image" id="como-funciona"><div className="mini-copy"><p className="kicker">Paso a paso</p><h2>Así funciona {SITE.brand}</h2><p>Cada incidencia se registra, se revisa y se asigna a Administración o Mantenimiento; la persona responsable actualiza su estado y queda un histórico hasta su resolución.</p></div><img className="section-banner infographic-desktop" src="/screenshots/seccion-paso-a-paso.png" alt="Paso a paso: se comunica una incidencia, el Presidente la revisa, se deriva a Administración o Mantenimiento, la persona responsable actualiza el estado y todo queda registrado hasta su resolución" loading="lazy" /><div className="infographic-mobile">
+        <div className="mobile-step-card green"><span className="step-number">1</span><p>Se comunica una incidencia.</p></div>
+        <div className="mobile-step-card blue"><span className="step-number">2</span><p>El presidente la revisa.</p></div>
+        <div className="mobile-step-card yellow"><span className="step-number">3</span><p>Se deriva a Administración o Mantenimiento.</p></div>
+        <div className="mobile-step-card orange"><span className="step-number">4</span><p>La persona responsable actualiza el estado.</p></div>
+        <div className="mobile-step-card green"><span className="step-number">5</span><p>Todo queda registrado hasta su resolución.</p></div>
+      </div></section>
 
       <section className="section roles" id="para-quien"><div className="centered"><p className="kicker">Cada persona ve lo que necesita</p><h2>Una misma incidencia, todos coordinados</h2></div><div className="role-images">
         <div className="role-block"><img className="section-illustration" src="/screenshots/rol-presidente.png" alt="El presidente sabe qué está pasando: incidencias y estados, fotos y seguimiento, histórico e información clara" loading="lazy" /></div>
@@ -103,7 +114,25 @@ export default function App() {
         </div>
       </section>
 
-      <section className="section centered section-full-image"><div className="mini-copy"><p className="kicker">Comunicación que sí funciona</p><h2>WhatsApp sirve para hablar. {SITE.brand} sirve para hacer seguimiento.</h2></div><img className="section-banner" src="/screenshots/seccion-whatsapp-vs-presifix.png" alt="Comparativa: WhatsApp sirve para hablar, PresiFix sirve para hacer seguimiento, con ayuda inteligente de ChatGPT" loading="lazy" /></section>
+      <section className="section centered section-full-image"><div className="mini-copy"><p className="kicker">Comunicación que sí funciona</p><h2>WhatsApp sirve para hablar. {SITE.brand} sirve para hacer seguimiento.</h2></div><img className="section-banner infographic-desktop" src="/screenshots/seccion-whatsapp-vs-presifix.png" alt="Comparativa: WhatsApp sirve para hablar, PresiFix sirve para hacer seguimiento, con ayuda inteligente de ChatGPT" loading="lazy" /><div className="infographic-mobile">
+        <p className="mobile-comparison-intro">Una conversación puede perderse. Una incidencia en {SITE.brand} queda <span className="green-text">organizada, actualizada y registrada</span>.</p>
+        <div className="comparison-card whatsapp-card">
+          <h3>WhatsApp</h3>
+          <div className="comparison-item"><strong>Conversaciones</strong><span>Se mezclan y se pierden.</span></div>
+          <div className="comparison-item"><strong>Información dispersa</strong><span>En distintos chats y archivos.</span></div>
+          <div className="comparison-item"><strong>Búsqueda manual</strong><span>Pierdes tiempo buscando.</span></div>
+          <div className="comparison-item"><strong>Difícil histórico</strong><span>No hay trazabilidad clara.</span></div>
+        </div>
+        <span className="vs-mobile" aria-hidden="true">VS</span>
+        <div className="comparison-card presifix-card">
+          <h3>{SITE.brand}</h3>
+          <div className="comparison-item"><strong>Incidencia organizada</strong><span>Todo en su lugar y fácil de encontrar.</span></div>
+          <div className="comparison-item"><strong>Estado visible</strong><span>Todos al día, en tiempo real.</span></div>
+          <div className="comparison-item"><strong>Fotos y notas</strong><span>Contexto completo, decisiones mejores.</span></div>
+          <div className="comparison-item"><strong>Seguimiento</strong><span>Acciones claras y responsables.</span></div>
+          <div className="comparison-item"><strong>Histórico</strong><span>Todo queda registrado y disponible.</span></div>
+        </div>
+      </div></section>
 
       <section className="section centered pricing" id="precios"><p className="kicker">Precios claros</p><h2>Planes sencillos para cada comunidad</h2><p className="intro">La misma herramienta para todos. El precio se adapta al tamaño de la comunidad.</p><img className="pricing-illustration" src="/screenshots/precios-nuevo-diseno.png" alt="Tabla de precios de PresiFix según tamaño de comunidad: hasta 10 viviendas 9€, 11-25 viviendas 19€, 26-50 viviendas 29€ (más elegido), 51-100 viviendas 49€, más de 100 viviendas 79€, al mes" loading="lazy" /><p className="same"><span>✓</span> Mismas funciones en todos los planes. Solo cambia el precio según el número de viviendas.</p></section>
 
