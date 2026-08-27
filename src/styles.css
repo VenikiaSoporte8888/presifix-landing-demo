@@ -319,6 +319,18 @@ main{padding-bottom:6rem}
    en escritorio se ve la imagen tal cual; en móvil el texto de la
    imagen se hace ilegible, así que se sustituye por tarjetas de
    texto real con el mismo contenido */
+/* "Qué es PresiFix" es la única de las 3 infografías que también se ve
+   como imagen en móvil (las otras 2 — Paso a paso, WhatsApp vs PresiFix
+   — siguen usando tarjetas de texto, sin tocar). En vez de ir a 100vw
+   a pantalla completa como en escritorio, se limita al ancho disponible
+   con el mismo padding lateral que el kicker/H2 de la sección. */
+@media(max-width:768px){
+  .infographic-always{position:static;width:calc(100% - 2.5rem);max-width:calc(100% - 2.5rem);margin:1.5rem auto 0;border-radius:18px;left:auto;right:auto}
+}
+@media(max-width:390px){
+  .infographic-always{width:calc(100% - 1.75rem);max-width:calc(100% - 1.75rem)}
+}
+
 .infographic-mobile{display:none}
 @media(max-width:768px){
   .infographic-desktop{display:none}
